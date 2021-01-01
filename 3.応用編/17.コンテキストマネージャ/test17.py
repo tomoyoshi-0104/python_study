@@ -14,3 +14,15 @@ with ContextManagerText() as as_obj:
     # print('with')
     # val = int('abc')
     print(as_obj)
+print()
+
+from contextlib import contextmanager
+@contextmanager
+def context_manager_test():
+    print('enter')
+    yield 'as obj'
+    print('exit')
+# with context_manager_test():
+with context_manager_test() as as_obj:
+    # print('with')
+    print(as_obj)
